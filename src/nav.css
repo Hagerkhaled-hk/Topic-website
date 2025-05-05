@@ -1,0 +1,732 @@
+:root {
+    --body_font: "Open Sans", sans-serif;
+    --title_font: "Montserrat", sans-serif;
+    --sec_color: #13547a;
+    --delay: 0.1s;
+    --duration: 0.2s;
+    --mix_color: linear-gradient(to right, #4b94a2, #7ccbc4);
+    --light_color: #7ccbc4;
+    --dark_color: #4b94a2;
+    --input_color: #717275;
+}
+
+body {
+    font-size: 13px;
+    padding: 3px;
+
+    margin: 0px;
+    font-family: var(--body_font);
+    display: block;
+
+}
+
+.stand_img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.nav_one,
+.nav_one div:first-child,
+.nav_one div:nth-child(2) ul {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav_one {
+    background: var(--mix_color);
+    justify-content: space-around;
+    height: 50px;
+    margin-bottom: 2px;
+}
+
+
+.nav_one div:first-child {
+    display: flex;
+}
+
+
+
+.nav_one h1 {
+    text-transform: capitalize;
+    font-size: 25px;
+    font-family: var(--title_font);
+}
+
+
+
+
+.nav_one div:nth-child(2) ul,
+.nav_one div:last-child section:last-child ul {
+    list-style: none;
+    position: relative;
+}
+
+.nav_one div:nth-child(2) ul li,
+.nav_one div:last-child section:last-child ul li {
+    margin: 0px 20px;
+    text-transform: uppercase;
+
+}
+
+
+.nav_one div:nth-child(2) ul li a,
+.nav_one div:last-child section:last-child li a {
+    text-decoration: none;
+    color: white;
+    transition: var(--duration) var(--delay);
+
+}
+
+
+.nav_one div:nth-child(2) ul li:first-child a .nav_one div:last-child section:last-child ul li:first-child a {
+    color: var(--sec_color);
+}
+
+
+.nav_one div:nth-child(2)>ul li:last-child a:focus+section,
+.nav_one div:last-child section:last-child li:last-child a:focus+section {
+    visibility: visible;
+}
+
+
+.nav_one div:nth-child(2) ul section,
+.nav_one div:last-child section:last-child ul section {
+    position: absolute;
+    right: -44px;
+    top: 28px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    background-color: white;
+    visibility: hidden;
+}
+
+
+.nav_one div:nth-child(2) ul section ul,
+.nav_one div:last-child section:last-child ul section ul {
+    display: block;
+    padding: 0px;
+
+
+}
+
+.nav_one div:nth-child(2) ul section ul::before,
+.nav_one div:last-child section:last-child ul section ul::before {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    transform: rotate(-45deg);
+    top: -20px;
+    left: 5px;
+}
+
+.nav_one div:nth-child(2) ul section ul li,
+.nav_one div:last-child section:last-child ul section ul li {
+    margin: 7px 0px;
+    font-size: 12px;
+    color: var(--sec_color);
+    letter-spacing: 0.3px;
+    cursor: pointer;
+
+}
+
+.nav_one div:nth-child(2) ul section ul li:hover,
+.nav_one div:last-child section:last-child ul section ul li:hover {
+    transition: var(--duration);
+
+    transform: scale(1.1);
+
+}
+
+
+
+
+.nav_one div:last-child i {
+    border-radius: 50%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--duration) var(--delay);
+
+}
+
+.nav_one div:last-child i:last-child {
+    display: none;
+}
+
+
+
+.nav_one div:last-child i:hover,
+.nav_two section:first-child div:last-child div:hover {
+    background-color: var(--sec_color);
+}
+
+
+.nav_one div:nth-child(2) ul li a:hover,
+.nav_one div:nth-child(2)>ul li:last-child a:focus,
+.nav_one div:nth-child(2)>ul li:last-child a:hover i,
+.nav_one div:nth-child(2)>ul li:last-child a:focus i {
+    color: var(--sec_color);
+}
+
+
+.nav_one div:nth-child(2)>ul li:last-child i,
+.nav_one div:last-child section:last-child ul li:last-child i {
+    color: white;
+    transition: var(--duration) var(--delay);
+
+}
+
+.nav_two {
+    height: 120vh;
+
+
+
+
+}
+
+.nav_two section {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav_two section:first-child {
+    background: var(--mix_color);
+
+}
+
+
+
+
+.nav_two section:first-child h2 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 39px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin: -40px 0px 0px 0px;
+}
+
+.nav_two section:first-child p {
+    color: var(--sec_color);
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 0.8;
+
+}
+
+.nav_two section:first-child input {
+    width: 110vh;
+    height: 10vh;
+    padding: 20px 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.nav_two section:first-child div:last-child {
+
+
+    position: relative;
+}
+
+.nav_two section:first-child input::placeholder {
+    text-transform: capitalize;
+}
+
+.nav_two section:first-child i {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav_two section:first-child div:last-child div {
+    background-color: var(--light_color);
+    width: 100px;
+    height: 46px;
+    border-radius: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: var(--duration) var(--delay);
+
+}
+
+.nav_two section:first-child div:last-child div p {
+    color: white;
+    font-weight: normal;
+    opacity: 10;
+
+}
+
+/* ---------Start of last_childl---------
+ */
+.nav_two section:last-child {
+    background: #7ccbc4;
+    border-radius: 0px 0px 100px 100px;
+    position: relative;
+    height: 49vh;
+}
+
+.nav_two section:last-child .card_holder {
+    position: absolute;
+    width: 65%;
+    /*     height: 110%;
+ */
+    height: fit-content;
+    display: flex;
+    bottom: 45px;
+    justify-content: center;
+}
+
+.nav_two section:last-child div:first-child * {
+    width: 100%;
+}
+
+
+.nav_two section:last-child .card_holder .aside_one {
+    background-color: white;
+    height: 100%;
+    width: 40%;
+    padding: 0px 10px;
+    border-radius: 15px;
+    margin-right: 15px;
+    position: relative;
+
+}
+
+
+.nav_two section:last-child .card_holder .aside_one h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: var(--title_font);
+    text-transform: capitalize;
+    margin-bottom: -5px;
+    font-weight: normal;
+
+}
+
+.nav_two section:last-child .card_holder .aside_one p {
+    color: var(--input_color);
+    margin-bottom: -2px;
+
+
+}
+
+
+.nav_two section:last-child .card_holder .aside_one::after {
+    content: "14";
+    position: absolute;
+    top: 17px;
+    right: 13px;
+    color: white;
+    background-color: #00b0ff;
+    ;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 12px;
+
+}
+
+
+.nav_two section:last-child .card_holder .aside_two {
+    background: linear-gradient(20deg, #13547ae4, #82bfb5da),
+        url("imgs/finance.jpg") no-repeat center;
+    background-size: 100% 100%;
+    width: 65%;
+    padding: 15px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: normal;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+
+
+}
+
+.nav_two section:last-child .card_holder .aside_two h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 8px;
+
+}
+
+
+.nav_two section:last-child .card_holder .aside_two p,
+.nav_two section:last-child .card_holder .aside_one p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+
+
+}
+
+
+.nav_two section:last-child .card_holder .aside_two .learn_more {
+    background-color: var(--light_color);
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav_two section:last-child .card_holder .aside_two .learn_more p {
+    width: fit-content;
+    font-weight: bold;
+}
+
+
+.nav_two section:last-child .card_holder .aside_two .learn_more:hover {
+    background-color: var(--sec_color);
+}
+
+
+.nav_two section:last-child .card_holder .aside_two div:last-child,
+.nav_two section:last-child .card_holder .aside_two div:last-child ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_two section:last-child .card_holder .aside_two div:last-child ul {
+    margin-left: -30px;
+    justify-content: flex-start;
+}
+
+.nav_two section:last-child .card_holder .aside_two div:last-child ul li a {
+    color: white;
+}
+
+
+
+.nav_two section:last-child .card_holder .aside_two div:last-child ul li {
+    list-style: none;
+    background-color: var(--light_color);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+
+}
+
+
+
+.nav_two section:last-child .card_holder .aside_two div:last-child ul li:hover {
+    background-color: var(--sec_color);
+    animation: share_li 0.4s var(--delay) forwards;
+
+}
+
+.nav_two section:last-child .card_holder .aside_two div:last-child ul li a {
+    width: fit-content;
+    height: fit-content;
+}
+
+.nav_two section:last-child .card_holder .aside_two div:last-child ul li:hover a {
+    animation: share_icons 0.2s var(--delay) reverse;
+    /* background-color: red;
+ */
+}
+
+.nav_two section:last-child .card_holder .aside_two>div:last-child p {
+    width: fit-content;
+    letter-spacing: 0px;
+}
+
+
+.nav_two section:last-child .card_holder .aside_two::after {
+    content: "25";
+    color: white;
+    background-color: #536dfe;
+    position: absolute;
+    padding: 3px;
+    border-radius: 2px;
+    right: 20px;
+    top: 20px;
+    font-size: 10px;
+
+}
+
+
+.nav_two section:last-child .card_holder .aside_two div:last-child section {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background: none;
+    right: 20px;
+    bottom: 30px;
+}
+
+.nav_two section:last-child .card_holder .aside_two div:last-child section i {
+    font-size: 18px;
+}
+
+
+.nav_two section:last-child .card_holder .aside_two:hover,
+.nav_two section:last-child .card_holder .aside_one:hover {
+    transform: translateY(-5px);
+    transition: 0.3s 0.1s;
+}
+
+.nav_one div:last-child section:last-child
+{
+
+visibility: hidden;
+
+}
+
+
+@keyframes share_li {
+    100% {
+        transform: scale(1.4);
+    }
+
+}
+
+
+@keyframes share_icons {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+
+@media (max-width : 1060px) {
+    .nav_two section:last-child .card_holder {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        bottom: 20px;
+    }
+
+    .nav_two {
+        height: 155vh;
+    }
+
+    .nav_two section:first-child input {
+/*         width: 99vw;
+ */  
+
+width: 70vw;
+
+}
+
+    .nav_two section:last-child .card_holder .aside_one,
+    .nav_two section:last-child .card_holder .aside_two
+    {
+        width: 74%;
+        margin-right: 4px;
+
+    }
+    .nav_two section:last-child
+    {
+        height: 500px;
+    }
+    .nav_two
+    {
+        height: 200vh;
+    }
+
+}
+
+
+
+
+
+@media (max-width : 990px) {
+
+
+
+
+    .nav_two section:last-child .card_holder .aside_one {
+/*         width: 65%;
+ */    
+/* margin-right: 4px;
+ */
+} 
+/* 
+    .nav_two {
+        height: 170vh;
+    }
+
+ */
+
+}
+
+
+@media (max-width : 920px) {
+
+  /*   .nav_two section:first-child input {
+        width: 70vw;
+    } */
+
+
+    .nav_one div:nth-child(2) ul {
+        display: none;
+    }
+
+    .nav_one div:last-child {
+
+        gap: 5px;
+        display: flex;
+
+
+    }
+
+    .nav_one div:last-child i {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .nav_one {
+        height: 60px;
+    }
+
+    .nav_one h1 {
+        font-size: 30px;
+    }
+
+    .stand_img {
+        width: 30px;
+        height: 30px;
+
+
+    }
+
+    /*     .nav_one div:last-child i:last-child {
+        display:flex;
+
+
+        }
+ */
+
+    .nav_one div:last-child section:last-child {
+        position: absolute;
+        background-color: var(--light_color);
+        z-index: 100;
+        height: 340px;
+        top: 10.5%;
+        width: 100%;
+        left: 0px;
+
+    }
+
+
+
+    .nav_one div:last-child section:last-child ul li {
+        margin: 0px;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav_one div:last-child > section ul li:hover {
+        transition: var(--duration);
+
+
+    }
+
+
+
+    .nav_one div:last-child section:last-child ul li a:hover,
+    .nav_one div:last-child section:last-child ul li:first-child a {
+        color: var(--sec_color);
+    }
+
+    .nav_one div:last-child section:last-child ul li:last-child {
+        position: relative;
+    }
+
+
+    .nav_one div:last-child section:last-child li:last-child section {
+        position: absolute;
+        width: 20%;
+        left: 50%;
+        height: fit-content;
+    }
+
+    .nav_one div:last-child section:last-child ul {
+        padding: 0px;
+    }
+   
+            
+    .nav_one div:last-child i:nth-child(2):focus + section,
+    .nav_one div:last-child section:hover
+          {
+
+visibility: visible;
+
+
+    }
+
+
+
+}
+
+
+@media (max-width : 730px) {
+
+    .nav_two section:last-child .card_holder .aside_one,
+    .nav_two section:last-child .card_holder .aside_two
+    {
+        width: 90%;
+/*         margin-right: 4px;
+ */
+    }
+    
+}
+
+@media (max-width : 450px) {
+    .nav_two section:first-child h2
+    {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width : 404px) {
+
+.nav_two section:first-child p
+{
+    margin-left: 30px;
+}
+main div ul li
+{
+    padding: 8px;
+}
+}
+
+
+
+

@@ -1,0 +1,123 @@
+
+main >section:last-child h2
+{
+margin-left: 50px;
+    padding: 30px;
+width: 500px;
+
+}
+
+
+main > section:last-child > div
+{
+     display: grid;
+grid-template-columns: 1fr 1fr;
+text-transform: capitalize;
+ 
+
+}
+ 
+ 
+main > section:last-child > div  .image img
+{
+    width: 100%;
+}
+
+main > section:last-child > div .topic_section 
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    font-size: 35px;
+    margin-left: 50px;
+    position: relative;
+
+}
+
+
+main > section:last-child > div .topic_section .question
+{
+    padding: 10px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+position: relative;
+
+}
+
+main > section:last-child > div .topic_section .question:focus,
+main > section:last-child > div .topic_section .question:hover
+{
+    border: 3px solid var(--light_color);
+    background-color: #7ccbc449;
+}
+
+main > section:last-child > div .topic_section .answer
+{
+    font-size: 15px;
+    width: 90%;
+    margin:5px 0px  5px 20px ;
+color: rgba(0, 0, 0, 0.71);
+opacity: 0;
+height: 0px;
+overflow: hidden;
+line-height: 20px;
+letter-spacing: 0.2px;
+
+}
+
+main > section:last-child > div .topic_section .q_1:focus + .ans_1 ,
+main > section:last-child > div .topic_section .q_2:focus + .ans_2,
+main > section:last-child > div .topic_section .q_3:focus + .ans_3 
+{
+    opacity:10;
+    height:100%;
+    overflow:visible;
+}
+
+
+main > section:last-child > div .topic_section i 
+{
+    font-size: 15px;
+    position: absolute;
+    right:25px;
+    top: 15px;
+}
+
+
+
+@media (max-width : 730px) {
+    main > section:nth-child(3)
+    {
+        width: 100vw;
+    }
+    main > section:last-child > div
+    {
+        grid-template-columns: auto;
+    }
+
+    main > section:nth-child(3)  :is(.image,.topic_section)
+    {
+        width: 90vw;
+    }
+
+    main > section:last-child > div .topic_section
+    {
+        margin-left: 20px;
+    }
+    main >section:last-child h2
+    {
+        width: 250px;
+    }
+}
+
+@media (max-width : 378px) {
+
+main >section:last-child h2
+{
+    margin-left: 0px;
+}
+}
